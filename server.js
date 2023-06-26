@@ -5,11 +5,19 @@ const ShortUrl = require("./models/shortUrl");
 // Creating an Express application:
 const app = express();
 
-// Connecting to the MongoDB database:
-mongoose.connect("mongodb://localhost:27017/url", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+//connect to MONGODB
+const MONGO_URI ="mongodb+srv://vasusakhare:wod6NTN7flsDDXMk@cluster0.itxjjy6.mongodb.net/URL-Shortener?retryWrites=true&w=majority"
+//you can replace with your cloud database uri or your local database uri(mongodb://localhost:27017)
+  mongoose.connect(MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('🌟 Connected to MongoDB! 🚀');
+  })
+  .catch((error) => {
+    console.error('❌ Error connecting to MongoDB:', error);
+  });
 
 // Configuring the application
 app.set("view engine", "ejs");
@@ -30,7 +38,7 @@ app.get("/", async (req, res) => {
 // Handling the "/search_url" route
 app.get("/about", async (req, res) => {
   try {
-    res.render("about")
+    res.render("about");
   } catch (error) {
     console.error(error);
     res.sendStatus(500);
@@ -71,6 +79,6 @@ app.get("/:shortUrl", async (req, res) => {
 });
 
 // Starting the server
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Server is running on http://localhost:3000");
+app.listen(3000, () => {
+  console.log("Server is running on http://localhost:3000 !🚀");
 });
