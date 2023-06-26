@@ -1,0 +1,95 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.header {
+    background-color: #007bff;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.header-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: #333333;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footer span {
+    font-size: 14px;
+    color: #fdfbfb;
+}
+
+.heart {
+    color: #ff0000;
+}
+  
+  .about-heading {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    font-size: 16px;
+    text-align: justify;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .about-content strong {
+    color: #333;
+  }
+
+  .contacts-container {
+    align-items: center;
+    
+  }
+
+  .contacts-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .contacts-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .contacts-list li {
+    margin-bottom: 10px;
+  }
+
+  .contacts-list strong {
+    font-weight: bold;
+  }
+/*   
+  .contacts-list li:last-child {
+    margin-bottom: 0;
+  } */
+  
