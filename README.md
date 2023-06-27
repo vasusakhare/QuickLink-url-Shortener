@@ -30,4 +30,11 @@ To run the QuickLink URL Shortener project, follow these steps:
 - nodemon
 - shortid
 
+<h2>
+ Accessing the Application:
+</h2>
+
+1. Open your web browser and visit `http://localhost:3000` to access the QuickLink application.
+2. Start using the application to shorten URLs, add notes, search the urls and notes and track click statistics.
+
 
