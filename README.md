@@ -12,12 +12,12 @@ QuickLink is an intuitive web application designed to simplify URL management. I
 
 To run the QuickLink URL Shortener project, follow these steps:
 1. Install Node.js on your machine if you haven't already (https://nodejs.org).
-2. Clone the repository: `git clone https://github.com/vasusakhare/QuickLink-url-Shortener.git`
+2. Clone the repository: `git clone <repository_url>`.
 3. Navigate to the project directory.
-4. Install the required dependencies by running the command `npm install` in the backend directory.
+4. Install the required dependencies by running the command `npm install`.
 5. In the server.js file, replace the database connection URI or you can also use it without replacing it as I have provided a valid URI.
-6. Run the application: `npm run url`
-7. Access the application in your web browser at: `http://localhost:3000`
+6. Run the application: `npm run url`.
+7. Access the application in your web browser at: `http://localhost:3000`.
 
 
 <h2>
