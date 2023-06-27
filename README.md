@@ -52,20 +52,31 @@ The internal working of the project involves several key components and processe
    - Header and Footer: A consistent user interface was achieved by implementing header and footer components that appeared across the entire application. This ensured a unified navigation experience for users.
 
 <h2>
-Key Learnings:
+My Key Learnings:
 </h2>
    
    During the development of the QuickLink application, I gained valuable insights and practical experience in various aspects of web development. Here are my key learnings:
 
-   -Full Stack Development: As a new web developer, working on the QuickLink application allowed me to gain valuable experience in implementing both the server-side and client-side components. This comprehensive involvement provided me with a holistic understanding of web development, from the backend to the frontend
+- Full Stack Development: As a new web developer, working on the QuickLink application allowed me to gain valuable experience in implementing both the server-side and client-side components. This comprehensive involvement provided me with a holistic understanding of web development, from the backend to the frontend.
+- Bootstrap: Utilize Bootstrap framework for efficient and visually appealing UI design without extensive CSS coding.
+- Search Functionality: Implement search feature for users to quickly find specific data within the application.
+- Click Tracking: Monitor and track the number of clicks on shortened URLs to gather valuable user engagement data.
+- README Documentation: Create well-structured README files to provide clear instructions and guidance for other developers.
+- Debugging Skills: Improve debugging abilities by effectively identifying and resolving errors during development.
 
-  -Bootstrap and CSS: Leveraging the power of Bootstrap, I enhanced the application's visual design without the need to write extensive CSS code. Using its predefined styles and components, I created a professional and visually appealing user interface.
+<h2>
+Resources:
+</h2>
+During the development of the QuickLink application, I referred to various resources to enhance my knowledge and skills. Here are the websites and YouTube channels I utilized:
+- W3Schools
+- Stack overflow for debugging
+- WebDev simplified youtube video
+- npm website: Used to reference documentation and syntax for working with npm packages.
 
-  -Search Functionality: I implemented a search feature that allowed users to quickly find specific notes or URLs within the application. This improved the usability of the application and enhanced the user experience.
 
-  -Click Tracking: By implementing click tracking, I was able to monitor the number of clicks on shortened URLs. This feature provided valuable insights into the popularity and engagement of the URLs, helping users track their links' performance.
 
-  -Writing Structured README: I gained experience in writing a well-structured README file for the project. This documentation serves as a guide for other developers, providing clear instructions on how to set up and use the application effectively.
+
+
 
 
 
