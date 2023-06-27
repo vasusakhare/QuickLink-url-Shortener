@@ -5,7 +5,6 @@
 Project Description:
 QuickLink is an intuitive web application designed to simplify URL management. It enables users to shorten URLs, add personal notes, and keep track of click statistics. With QuickLink, you can efficiently handle your shortened URLs, annotate them with relevant notes, easily search for saved URLs and notes, and conveniently monitor click counts for each shortened URL.
 
-
 <h2>
   How to Run the Project:
 </h2>
@@ -67,11 +66,14 @@ My Key Learnings:
 <h2>
 Resources:
 </h2>
+
 During the development of the QuickLink application, I referred to various resources to enhance my knowledge and skills. Here are the websites and YouTube channels I utilized:
-- W3Schools
+
+- W3Schools(https://www.w3schools.com/)
 - Stack overflow for debugging
-- WebDev simplified youtube video
-- npm website: Used to reference documentation and syntax for working with npm packages.
+- WebDev simplified youtube video(https://www.youtube.com/c/webdevsimplified)
+- MongoDB tutorial from code with harry youtube channel(https://youtu.be/oSIv-E60NiU)
+- npm website: Used to reference documentation and syntax for working with npm packages.(https://www.npmjs.com/)
 
 
 
