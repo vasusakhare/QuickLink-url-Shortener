@@ -80,6 +80,6 @@ app.get("/:shortUrl", async (req, res) => {
 });
 
 // Starting the server
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000 !🚀");
+app.listen(8000, () => {
+  console.log("Server is running on http://localhost:8000 !🚀");
 });
