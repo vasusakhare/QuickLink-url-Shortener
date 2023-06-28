@@ -15,13 +15,13 @@ To run the QuickLink URL Shortener project, follow these steps:
 4. Install the required dependencies by running the command `npm install`.
 5. In the server.js file, replace the database connection URI or you can also use it without replacing it as I have provided a valid URI.
 6. Run the application: `npm run url`.
-7. Access the application in your web browser at: `http://localhost:3000`.
+7. Access the application in your web browser at: `http://localhost:8000`.
 
 <h2>
  Accessing the Application:
 </h2>
 
-1. Open your web browser and visit `http://localhost:3000` to access the QuickLink application.
+1. Open your web browser and visit `http://localhost:8000` to access the QuickLink application.
 2. Start using the application to shorten URLs, add notes, search the urls and notes and track click statistics.
 
 <h2>
