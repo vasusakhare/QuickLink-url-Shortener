@@ -65,51 +65,6 @@ body {
   background-color: #007bff;
 }
 
-.short-url {
-  margin-top: 20px;
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.short-url h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-  color: #ff5722; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.short-url p {
-  margin-bottom: 5px;
-  font-size: 16px;
-  color: #333333;
-}
-
-.short-url a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.short-url a:hover {
-  text-decoration: underline;
-}
-
-.short-url .timestamp {
-  font-size: 14px;
-  color: #888888;
-}
-
-.short-url .notes {
-  font-style: italic;
-  color: #555555;
-}
-
-.short-url .no-urls {
-  text-align: center;
-  font-size: 18px;
-  color: #555555;
-}
 .custom-table {
   width: 100%;
   border-collapse: collapse;
