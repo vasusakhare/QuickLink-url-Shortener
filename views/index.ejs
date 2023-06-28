@@ -76,32 +76,6 @@
       </form>
       <!-- <hr /> -->
 
-      <div class="short-url">
-        <div class="text-center mt-3">
-          <% if (shortUrls.length > 0) { %>
-          <h2 class="text-primary text-uppercase">Latest Shortened URL</h2>
-          <p class="shortened-link">
-            Shortened Link:
-            <a href="<%= shortUrls[shortUrls.length - 1].short %>">
-              <%= shortUrls[shortUrls.length - 1].short %>
-            </a>
-          </p>
-          <p class="original-link">
-            Original Link: <%= shortUrls[shortUrls.length - 1].full %>
-          </p>
-          <p class="notes">
-            Notes: <%= shortUrls[shortUrls.length - 1].notes %>
-          </p>
-          <p class="timestamp">
-            Created at: <%= shortUrls[shortUrls.length - 1].timestamp %>
-          </p>
-          <% } else { %>
-          <div class="no-urls">
-            <p>No URLs have been shortened yet.</p>
-          </div>
-          <% } %>
-        </div>
-      </div>
       <br>
 
 
@@ -123,10 +97,10 @@
         <table id="myTable" class="table table-striped">
           <thead>
             <tr>
-              <th>URL</th>
+              <th>Original URL</th>
               <th>Short URL</th>
               <th>Notes</th>
-              <th>Clicks</th>
+              <th>Click Count</th>
             </tr>
           </thead>
           <tbody>
