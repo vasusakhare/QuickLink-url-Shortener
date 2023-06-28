@@ -45,14 +45,44 @@ Working of the Project :
 
 The internal working of the project involves several key components and processes. Here's a breakdown of the internal workings:
 
-   - Node.js and Express: The application was built using Node.js as the runtime environment and Express.js as the web framework. Node.js provided a powerful and scalable platform, while Express.js facilitated handling HTTP requests and responses efficiently.
-   - MongoDB: To store user information, including hashed passwords, I opted for MongoDB as the database solution. The Mongoose library was employed for data modeling and interaction, simplifying the integration between the application and the database.
-   - Short ID Generation: Generating unique and compact identifiers for shortened URLs was made possible by utilizing the shortid library. This library ensured that each shortened URL had a distinct identifier.
-   - Number of Clicks : The number of clicks on shortened URLs was tracked by incrementing the 'clicks' counter by 1 for each click event.
-   - ejs: The ejs templating engine was employed to dynamically render HTML templates on the server-side, enabling efficient generation of HTML content with embedded JavaScript logic.
-   - CSS and Bootstrap: Custom CSS styles were implemented to enhance the visual presentation of the application. Additionally, the Bootstrap framework was leveraged to utilize its predefined styles and components, resulting in a consistent and responsive design across different devices.
-   - Searching Data: To facilitate data searching and filtering, a filtering mechanism was implemented on the frontend. This enabled users to search and display specific data based on their input criteria, enhancing the user experience.
-   - Header and Footer: A consistent user interface was achieved by implementing header and footer components that appeared across the entire application. This ensured a unified navigation experience for users.
+   - Node.js and Express:
+
+       - Node.js was used as the runtime environment for the application.
+       - Express.js was employed as the web framework.
+       - Node.js provided a powerful and scalable platform for server-side development.
+       - Express.js facilitated efficient handling of HTTP requests and responses.
+    - ejs:
+       - The `ejs` templating engine was employed.
+       - `ejs` dynamically rendered HTML templates on the server-side.
+       - HTML content with embedded JavaScript logic could be efficiently generated.
+   - MongoDB:
+       - MongoDB was chosen as the database solution to store shorten URLs and associated details.
+         
+   - Short ID Generation:
+       - `shortid` library was used to shorten urls.
+       - Shortid generated unique and compact identifiers for shortened URLs.
+       - Each shortened URL had a distinct identifier.
+    
+   - Number of Clicks:
+       - The application tracked the number of clicks on shortened URLs.
+       - A 'clicks' counter was implemented.
+       - The counter was incremented by 1 for each click event.
+
+   - Searching Data:
+       - A filtering mechanism was implemented on the frontend.
+       - Users could search and display specific data based on their input criteria.
+       - The filtering feature enhanced the user experience and facilitated data exploration.
+   - Header and Footer: 
+       - Header and footer components were implemented.
+       - These components appeared consistently across the entire application.
+       - The header and footer provided a unified navigation experience for users.
+    
+   - CSS and Bootstrap:
+       - Custom CSS styles were implemented.
+       - CSS styles enhanced the visual presentation of the application.
+       - The Bootstrap framework was leveraged for predefined styles and components.
+       - Bootstrap ensured a consistent and responsive design across devices.
+
 
 <h2>
 My Key Learnings:
