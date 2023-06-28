@@ -20,6 +20,11 @@ const shortUrlSchema = new mongoose.Schema({
     type: Number,
     required: true,
     default: 0
+  },
+  timestamp: {
+    type: String,
+    required: true,
+    default: () => new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' })
   }
 });
 
