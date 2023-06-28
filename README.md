@@ -25,6 +25,11 @@ To run the QuickLink URL Shortener project, follow these steps:
 2. Start using the application to shorten URLs, add notes, search the urls and notes and track click statistics.
 
 <h2>
+Deployment
+</h2>
+<a href="https://quicklink-shortener.onrender.com/">Visit the QuickLink site</a>
+
+<h2>
  Dependencies:
 </h2>
 
