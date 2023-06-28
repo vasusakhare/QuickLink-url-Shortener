@@ -1,3 +1,4 @@
+
 body {
   background-color: #f2f2f2; 
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -99,11 +100,6 @@ body {
   color: #888888;
 }
 
-.short-url .notes {
-  font-style: italic;
-  color: #555555;
-}
-
 .short-url .no-urls {
   text-align: center;
   font-size: 18px;
@@ -162,3 +158,4 @@ body {
 .heart {
   color: #ff0000;
 }
+
