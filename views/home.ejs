@@ -1,85 +1,150 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const ShortUrl = require("./models/shortUrl");
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QuickLink Homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script>
+      //search function
+      function search() {
+        var query = document.getElementById("searchQuery").value.toLowerCase();
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+        for (var i = 1; i < rows.length; i++) {
+          var cells = rows[i].getElementsByTagName("td");
+          var rowMatch = false; // Initialize a variable to track if any cell in the row matches the query
+          for (var j = 0; j < cells.length - 1; j++) {
+            var cellText = cells[j].innerText.toLowerCase();
+            if (cellText.includes(query)) {
+              // Check if the cell text includes the query nd set the flag true and break the loop
+              rowMatch = true;
+              break;
+            }
+          }
+          rows[i].style.display = rowMatch ? "" : "none"; //show or hide the results
+        }
+      }
+    </script>
+   
+  </head>
 
-// Creating an Express application:
-const app = express();
+  <body>
+    <div class="header">
+      <div class="header-title">QuickLink URL Shortener</div>
+      <div class="header-links">
+        <a href="about">About</a>
+        <!-- Include the About page using EJS syntax -->
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="text-center mt-4 mb-2 text-uppercase" style="font-size: 28px">
+        Shorten Your URL Here
+      </h2>
+      <form
+        action="/shortUrls"
+        method="POST"
+        class="my-4 form-inline text-center"
+      >
+        <div class="form-group">
+          <label for="fullUrl" class="visually-hidden">URL</label>
+          <input
+            type="url"
+            id="fullUrl"
+            name="fullUrl"
+            class="form-control mb-2"
+            placeholder="Full URL"
+            required
+          />
+          <input
+            type="text"
+            id="notes"
+            name="notes"
+            class="form-control mb-2"
+            placeholder="Give a note to your URL"
+          />
+          <button type="submit" class="btn btn-success mx-auto">Shorten</button>
+        </div>
+      </form>
 
-//connect to MONGODB
-const MONGO_URI ="mongodb+srv://vasusakhare:wod6NTN7flsDDXMk@cluster0.itxjjy6.mongodb.net/URL-Shortener?retryWrites=true&w=majority"
-//you can replace with your cloud database uri or your local database uri(mongodb://localhost:27017)
-  mongoose.connect(MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log('🌟 Connected to MongoDB! 🚀');
-  })
-  .catch((error) => {
-    console.error('❌ Error connecting to MongoDB:', error);
-  });
+      <div class="short-url">
+        <div class="text-center mt-3">
+          <% if (shortUrls.length > 0) { %>
+          <h2 class="text-primary text-uppercase">Latest Shortened URL</h2>
+          <p class="original-link">
+            Original Link: <%= shortUrls[shortUrls.length - 1].full %>
+          </p>
+          <p class="shortened-link">
+            Shortened Link:
+            <a href="<%= shortUrls[shortUrls.length - 1].short %>">
+              <%= shortUrls[shortUrls.length - 1].short %>
+            </a>
+          </p>
+          <p class="timestamp">
+            Created at: <%= shortUrls[shortUrls.length - 1].timestamp %>
+          </p>
+          <% } else { %>
+          <div class="no-urls">
+            <p>No URLs have been shortened yet.</p>
+          </div>
+          <% } %>
+        </div>
+      </div>
 
-// Configuring the application
-app.set("view engine", "ejs");
-app.use(express.static("public"));
-app.use(express.urlencoded({ extended: false }));
+      <h4 class="text-center mt-4 mb-2 text-primary"style="font-size: 26px">
+        Search Your Shortened URLs here
+      </h4>
+      <br />
 
-// Handling the root route ("/")
-app.get("/", async (req, res) => {
-  try {
-    const shortUrls = await ShortUrl.find();
-    res.render("home", { shortUrls });
-  } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
-});
-
-// Handling the "/search_url" route
-app.get("/about", async (req, res) => {
-  try {
-    res.render("about");
-  } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
-});
-
-// Handling form submissions ("/shortUrls")
-app.post("/shortUrls", async (req, res) => {
-  try {
-    const { fullUrl, shortUrl } = req.body;
-    await ShortUrl.create({
-      full: fullUrl,
-      short: shortUrl,
-      notes: req.body.notes,
-    });
-    res.redirect("/");
-  } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
-});
-
-
-// Redirecting short URLs
-app.get("/:shortUrl", async (req, res) => {
-  try {
-    const { shortUrl } = req.params;
-    const shortUrlDoc = await ShortUrl.findOne({ short: shortUrl });
-    if (!shortUrlDoc) {
-      return res.sendStatus(404);
-    }
-    shortUrlDoc.clicks++;
-    await shortUrlDoc.save();
-    res.redirect(shortUrlDoc.full);
-  } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
-  }
-});
-
-// Starting the server
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000 !🚀");
-});
+      <input
+        placeholder="Search using your Url or Note"
+        type="text"
+        id="searchQuery"
+        class="form-control col mr-2"
+        onkeyup="search()"
+      />
+      <br />
+      <div class="table-responsive">
+        <table id="myTable" class="table table-striped">
+          <thead>
+            <tr>
+              <th>Short URL</th>
+              <th>Original URL</th>
+              <th>Notes</th>
+              <th>Click Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% shortUrls.forEach(shortUrl => { %>
+            <tr>
+              
+              <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+              <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+              <td><%= shortUrl.notes %></td>
+              <td><%= shortUrl.clicks %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <br>
+      <br>
+    </div>
+    <footer>
+      <!-- Footer section -->
+      <div class="footer">
+        <!-- Footer content -->
+        <span
+          >&copy; 2023 All rights reserved. Created with ❤️ by Vaishnavi.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
