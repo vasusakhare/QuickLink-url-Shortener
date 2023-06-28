@@ -40,7 +40,7 @@ Deployment
 - shortid
 
 <h2>
-Internal working of my Project :
+Working of the Project :
 </h2>
 
 The internal working of the project involves several key components and processes. Here's a breakdown of the internal workings:
