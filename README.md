@@ -90,12 +90,14 @@ My Key Learnings:
    
    During the development of the QuickLink application, I gained valuable insights and practical experience in various aspects of web development. Here are my key learnings:
 
-- Full Stack Development: As a new web developer, working on the QuickLink application allowed me to gain valuable experience in implementing both the server-side and client-side components. This comprehensive involvement provided me with a holistic understanding of web development, from the backend to the frontend.
-- Bootstrap: Utilize Bootstrap framework for efficient and visually appealing UI design without extensive CSS coding.
-- Search Functionality: Implement search feature for users to quickly find specific data within the application.
-- Click Tracking: Monitor and track the number of clicks on shortened URLs to gather valuable user engagement data.
-- README Documentation: Create well-structured README files to provide clear instructions and guidance for other developers.
-- Debugging Skills: Improve debugging abilities by effectively identifying and resolving errors during development.
+- Full Stack Development: Successfully implemented Full Stack Development by seamlessly integrating server-side and client-side components in a unified project leveraging Express, EJS, and Node.js. 
+- Search Functionality: Implemented a search feature for efficient querying of URLs and notes. 
+- Click Tracking: Tracked the number of clicks on shortened URLs for user engagement insights. 
+- MongoDB Cloud Database: Successfully connected to and utilized a MongoDB cloud database. 
+- Debugging Skills: Developed expertise in debugging type errors, Axios errors, and HTTP status codes. 
+- Working with HTML, CSS, and Bootstrap: Worked with HTML templates and static files and Styled the application using Bootstrap and CSS.
+- README Documentation: Created well-structured README files to provide clear instructions and guidance for other developers.
+- Deployment on Render: Successfully deployed the application on the Render platform for seamless accessibility and scalability. 
 
 <h2>
 Resources:
